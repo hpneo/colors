@@ -1,0 +1,10 @@
+<div id="header">
+	<a href="/collections/new" class="center">New collection</a>
+</div>
+<ul>
+	<% @collections.each do |collection| %>
+		<li>
+			<h3><a href="<%= collection_path(collection) %>"><%= collection.name %></a></h3>
+		</li>
+	<% end %>
+</ul>

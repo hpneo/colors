@@ -1,0 +1,14 @@
+<div id="header">
+	<a href="/colors/new?collection=<%= @collection.id %>" class="left">Add color</a>
+	<a href="/" class="right">Back home</a>
+</div>
+<h2><%= @collection.name %></h2>
+<ul>
+	<% @collection.colors.each do |color| %>
+		<li>
+			<div style="background:<%= color.code %>" class="color_box"></div>
+			<h3><%= color.name %></h3>
+			<p><%= color.code %></p>
+		</li>
+	<% end%>
+</ul>

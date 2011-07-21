@@ -1,0 +1,14 @@
+<% form_for(@color) do |f| %>
+	<p>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	</p>
+	<p>
+	<%= f.label :code %>
+	<%= f.text_field :code %>
+	</p>
+	<p>
+		<%= hidden_field :color, :collection_id %>
+		<%= f.submit %>
+	</p>
+<% end %>
